@@ -1,0 +1,32 @@
+{
+  "python": {
+    "min_version": "3.12.0"
+  },
+  "cuda": {
+    "min_version": "12.4"
+  },
+  "checks": [
+    {
+      "name": "Check Python",
+      "type": "executable",
+      "command": "python --version",
+      "expected_output_contains": "Python"
+    },
+    {
+      "name": "Check Git",
+      "type": "executable",
+      "command": "git --version",
+      "expected_output_contains": "git version"
+    },
+    {
+      "name": "Check Visual Studio Build Tools folder",
+      "type": "directory_exists",
+      "path": "C:\\\\Program Files (x86)\\\\Microsoft Visual Studio\\\\Installer"
+    },
+    {
+      "name": "Check cl.exe presence",
+      "type": "file_exists",
+      "path": "C:\\\\Program Files (x86)\\\\Microsoft Visual Studio 14.0\\\\VC\\\\bin\\\\amd64\\\\cl.exe"
+    }
+  ]
+}

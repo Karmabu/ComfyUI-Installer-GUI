@@ -1,0 +1,56 @@
+{
+  "steps": [
+    {
+      "name": "Clone ComfyUI",
+      "command": "git clone https://github.com/comfyanonymous/ComfyUI"
+    },
+    {
+      "name": "Create virtual environment (external venv)",
+      "command": "python -m venv venv"
+    },
+    {
+      "name": "Activate venv and upgrade pip",
+      "command": "call venv\\Scripts\\activate.bat && python -m pip install --upgrade pip"
+    },
+    {
+      "name": "Install PyTorch with CUDA 12.4",
+      "command": "call venv\\Scripts\\activate.bat && pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124"
+    },
+    {
+      "name": "Install ComfyUI requirements.txt",
+      "command": "call venv\\Scripts\\activate.bat && pip install -r ComfyUI\\requirements.txt"
+    },
+    {
+      "name": "Install onnxruntime-gpu",
+      "command": "call venv\\Scripts\\activate.bat && pip install onnxruntime-gpu"
+    },
+    {
+      "name": "Install wheel, setuptools, packaging, ninja",
+      "command": "call venv\\Scripts\\activate.bat && pip install wheel setuptools packaging ninja"
+    },
+    {
+      "name": "Install accelerate, diffusers, transformers",
+      "command": "call venv\\Scripts\\activate.bat && pip install \"accelerate >= 1.1.1\" \"diffusers >= 0.31.0\" \"transformers >= 4.39.3\""
+    },
+    {
+      "name": "Update ensurepip and setuptools",
+      "command": "call venv\\Scripts\\activate.bat && python -m ensurepip --upgrade && python -m pip install --upgrade setuptools"
+    },
+    {
+      "name": "Create Run_Comfyui.bat file",
+      "command": "echo @echo off > Run_Comfyui.bat && echo cd ComfyUI >> Run_Comfyui.bat && echo call ..\\venv\\Scripts\\activate.bat >> Run_Comfyui.bat && echo echo Venv Activated >> Run_Comfyui.bat && echo ..\\venv\\Scripts\\python.exe -s main.py --fast --windows-standalone-build >> Run_Comfyui.bat && echo pause >> Run_Comfyui.bat"
+    },
+    {
+      "name": "Create Activate_Venv.bat file",
+      "command": "echo @echo off > Activate_Venv.bat && echo cd venv >> Activate_Venv.bat && echo call .\\Scripts\\activate.bat >> Activate_Venv.bat && echo echo Venv Activated >> Activate_Venv.bat && echo cmd.exe /k >> Activate_Venv.bat"
+    },
+    {
+      "name": "Create Update_Comfy.bat file",
+      "command": "echo @echo off > Update_Comfy.bat && echo cd ComfyUI >> Update_Comfy.bat && echo git pull >> Update_Comfy.bat && echo pause >> Update_Comfy.bat"
+    },
+    {
+      "name": "Clone ComfyUI Manager and Crystools",
+      "command": "git clone https://github.com/ltdrdata/ComfyUI-Manager ComfyUI\\custom_nodes\\ComfyUI-Manager && git clone https://github.com/crystian/ComfyUI-Crystools ComfyUI\\custom_nodes\\ComfyUI-Crystools"
+    }
+  ]
+}
