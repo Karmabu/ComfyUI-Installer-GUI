@@ -85,7 +85,8 @@ This GUI allows you to install **ComfyUI** in two different modes:
 - Fully **customizable** via JSON
 - Works **offline** (except for git/pip access)
 
----
+![eng](https://github.com/user-attachments/assets/de64387c-1922-4d9a-a438-19a8c390b46c)
+
 
 ## Authors & Support
 
