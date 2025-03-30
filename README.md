@@ -87,6 +87,15 @@ This GUI allows you to install **ComfyUI** in two different modes:
 
 ![eng](https://github.com/user-attachments/assets/de64387c-1922-4d9a-a438-19a8c390b46c)
 
+## 🔄 Update March 2025
+- Added full GUI editor for JSON-based installers
+- New LLM syntax checker using Ollama (configurable)
+- Visual command editor with step management
+- Cleaner layout and improved user experience
+
+![K3U JSON](https://github.com/user-attachments/assets/6bc8da5b-1e80-4ea2-98be-b85e0c06886e)
+
+
 # Beginner Guide - Setting Up ComfyUI Installer GUI
 
 Welcome! This guide will walk you through the installation of all prerequisites needed to run the **ComfyUI Installer GUI** in both Standard and Pro modes.
